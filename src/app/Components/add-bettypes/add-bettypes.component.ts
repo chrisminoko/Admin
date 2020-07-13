@@ -35,7 +35,7 @@ export class AddBettypesComponent implements OnInit {
     if(!this.groupmeetingForm.valid){
       return;
     }
-    if(this.title="Create"){
+    if(this.title=="Create"){
       this._bettypeservice.addBettype(this.groupmeetingForm.value)
           .subscribe((data:any)=>{
             this._router.navigate(['/bettypes'])
