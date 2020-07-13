@@ -23,7 +23,7 @@ export class FetchBettypesComponent implements OnInit {
   }
 
   delete(groupmeetingID:number){
-    var ans= confirm("Do you want to delete Group meeting with Id: "+groupmeetingID)
+    var ans= confirm("Do you want to delete BetType with Id: "+groupmeetingID)
       if(ans){
         this._bettypeservice.deleteBettype(groupmeetingID).subscribe((data:any)=>{
           this. getbettype();

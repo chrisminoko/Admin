@@ -17,7 +17,7 @@ export class AddBettypesComponent implements OnInit {
       this.groupmeetingid=this._avRoute.snapshot.params["id"];
     }
     this.groupmeetingForm=this._fb.group({
-      id:0,
+      betypeid:0,
       bettype:['', [Validators.required]]
     })
    }
@@ -38,20 +38,20 @@ export class AddBettypesComponent implements OnInit {
     if(this.title="Create"){
       this._bettypeservice.addBettype(this.groupmeetingForm.value)
           .subscribe((data:any)=>{
-            this._router.navigate(['/fetch-meetings'])
+            this._router.navigate(['/bettypes'])
             console.log('Navigate hit')
           })
     }else if (this.title=="Edit"){
       this._bettypeservice.updateBettype(this.groupmeetingForm.value)
       .subscribe((data:any)=>{
-        this._router.navigate(['/fetch-meetings'])
+        this._router.navigate(['/bettypes'])
         console.log('Edited'+data);
       })
     }
   }
 
   cancel() {  
-    this._router.navigate(['/fetch-meetings']);  
+    this._router.navigate(['/bettypes']);  
   } 
   get bettype() { return this.groupmeetingForm.get('bettype'); }  
 }

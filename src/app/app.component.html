@@ -1,12 +1,13 @@
 
 
-<div class="container">
+<div class="container-fluid">
+<app-side-menue></app-side-menue>
   <div class="row">
-<div class="col-md-6">
-  <app-fetch-bettypes></app-fetch-bettypes>
+<div class="col-md-12">
+ <div class="container">
+  <router-outlet></router-outlet>
+ </div>
 </div>
-<div class="col-md-6">
-  <app-add-bettypes></app-add-bettypes>
-</div>
+
   </div>
 </div>

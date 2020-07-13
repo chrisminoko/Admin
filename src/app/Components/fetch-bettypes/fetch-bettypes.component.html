@@ -1,16 +1,12 @@
-<h5>Bet Type/<h5>  
 
 <p *ngIf="!bettype"><em>Loading...</em></p>  
   
-<p>  
-    <a [routerLink]="['/add-meeting']">Create New</a>  
-</p>  
-  
-<table class='table' *ngIf="bettype">  
+
+<table class='table table-striped' *ngIf="bettype">  
     <thead>  
         <tr>  
             <th>Id</th>  
-            <th>Project Name</th>  
+            <th>Bet Type</th>  
         </tr>  
     </thead>  
     <tbody>  
@@ -19,12 +15,14 @@
             <td>{{ gmt.bettype }}</td>  
             <td>  
             <td>  
-                <!-- <a [routerLink]="['/meeting/edit/', gmt.betypeid]">Edit</a> |   -->
-                <a [routerLink]="" (click)="delete(gmt.betypeid)">Delete</a>  
+                    <button [routerLink]="['/bettype/edit/', gmt.betypeid]" class="btn btn btn-success">Edit</button> |
+                <button [routerLink]="" (click)="delete(gmt.betypeid)" class="btn btn btn-danger">Delete</button>
             </td>  
         </tr>  
     </tbody>  
 </table> 
 
-
+<p>  
+    <button [routerLink]="['/Add-bettypes']" class="btn btn btn-outline-primary"> Create New</button>
+</p>
 

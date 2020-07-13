@@ -14,7 +14,7 @@ export class BettypeService {
   }
 
   getBettypeById(id:number){
-   return this._http.get(this.rootUrl+'api/BetTypes/'+id)
+   return this._http.get(this.rootUrl+'api/BetTypes/Search?id='+id)
   }
 
   addBettype(BetTypes){
