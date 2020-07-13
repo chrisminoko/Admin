@@ -1,0 +1,30 @@
+<h5>Bet Type/<h5>  
+
+<p *ngIf="!bettype"><em>Loading...</em></p>  
+  
+<p>  
+    <a [routerLink]="['/add-meeting']">Create New</a>  
+</p>  
+  
+<table class='table' *ngIf="bettype">  
+    <thead>  
+        <tr>  
+            <th>Id</th>  
+            <th>Project Name</th>  
+        </tr>  
+    </thead>  
+    <tbody>  
+        <tr *ngFor="let gmt of bettype">  
+            <td>{{ gmt.betypeid }}</td>  
+            <td>{{ gmt.bettype }}</td>  
+            <td>  
+            <td>  
+                <!-- <a [routerLink]="['/meeting/edit/', gmt.betypeid]">Edit</a> |   -->
+                <a [routerLink]="" (click)="delete(gmt.betypeid)">Delete</a>  
+            </td>  
+        </tr>  
+    </tbody>  
+</table> 
+
+
+
