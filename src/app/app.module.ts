@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule  } from '@angular/core';
 import {RouterModule} from '@angular/router'
+
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';  
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,7 +11,13 @@ import { AddBettypesComponent } from './Components/add-bettypes/add-bettypes.com
 import { FetchBettypesComponent } from './Components/fetch-bettypes/fetch-bettypes.component';
 import { SportsComponent } from './Components/sports/sports.component';
 import { AddSportComponent } from './components/add-sport/add-sport.component';
-import { CountriesComponent } from './countries/countries.component';
+import { CountriesComponent } from './Components/countries/countries.component';
+import { FetchtournamentComponent } from './Components/fetchtournament/fetchtournament.component';
+import { AddTournamentComponent } from './Components/add-tournament/add-tournament.component';
+import { MarketsComponent } from './components/markets/markets.component';
+import { FetchEventsComponent } from './components/fetch-events/fetch-events.component';
+import { AddEventsComponent } from './components/add-events/add-events.component';
+
 
 
 @NgModule({
@@ -23,6 +30,12 @@ import { CountriesComponent } from './countries/countries.component';
     SportsComponent,
     AddSportComponent,
     CountriesComponent,
+    FetchtournamentComponent,
+    AddTournamentComponent,
+    MarketsComponent,
+    FetchEventsComponent,
+    AddEventsComponent,
+  
   ],
   imports: [
     BrowserModule,
@@ -30,7 +43,8 @@ import { CountriesComponent } from './countries/countries.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule
+    RouterModule,
+ 
   ],
   providers: [],
   bootstrap: [AppComponent]

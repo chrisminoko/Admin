@@ -21,7 +21,7 @@ export class AddSportComponent implements OnInit {
     this.groupmeetingForm=this._fb.group({
       sportId:0,
       name:['', [Validators.required]],
-      imageUrl:['', [Validators.required]]
+      imageUrl:['', [Validators.required]],
     })
    }
 

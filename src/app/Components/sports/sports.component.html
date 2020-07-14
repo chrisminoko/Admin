@@ -14,11 +14,11 @@
         <tr *ngFor="let gmt of sports">  
             <td>{{ gmt.sportId }}</td>  
             <td>{{ gmt.name }}</td>  
-            <td><img  style="background-color: black;"  src="{{gmt.imageurl}}" width="50" height="50" alt=""></td>  
+            <td><img  style="background-color: #643e94"  src="{{gmt.imageurl}}" width="50" height="50" alt=""></td>  
             <td>  
             <td>  
-              <a [routerLink]="['/sport/edit/', gmt.betypeid]">Edit</a> |  
-                <a [routerLink]="" (click)="delete(gmt.sportId)">Delete</a>  
+                <button [routerLink]="['/sport/edit/', gmt.sportId]" class="btn btn btn-success">Edit</button> |
+                <button [routerLink]="" (click)="delete(gmt.sportId)" class="btn btn btn-danger">Delete</button>
             </td>  
         </tr>  
     </tbody>  

@@ -10,6 +10,7 @@ import {SportService} from '../../Services/sport.service'
 export class SportsComponent implements OnInit {
 
   constructor(private _router:Router, private _sportservice:SportService) { }
+  p: number = 1;
  sports:Sports[];
   ngOnInit(): void {
     this.getsports();

@@ -15,7 +15,7 @@ export class SportService {
 
 
   getSportsById(id:number){
-   return this._http.get(this.rootUrl+'api/SportType/'+id)
+   return this._http.get(this.rootUrl+'api/SportType/get?id='+id)
   }
 
   addSports(BetTypes){
